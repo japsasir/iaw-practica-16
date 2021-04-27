@@ -12,7 +12,7 @@ En esta práctica tendremos que crear un archivo Dockerfile para crear una image
 **Tareas a realizar**
 ------------
 
-1. Crear una máquina virtual Amazon EC2.
+1. Crear una máquina virtual Amazon EC2. (Grupo seguridad P80,8080,443,3306)
 
 2. Instalar y configurar Docker y Docker compose en la máquina virtual.
 
