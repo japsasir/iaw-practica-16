@@ -5,10 +5,10 @@ version: '3.4'
 services:
 # Servicio Apache. Hacemos uso de 'build' en vez de image. Crear propio contenedor.
 # Nota: Montar a partir de https://github.com/josejuansanchez/iaw-practica-lamp
- apache:
+  apache:
     build: ./apache
     ports:
-        - "80:80"
+        - 80:80
     networks:
         - frontend-network
         - backend-network
@@ -56,7 +56,7 @@ services:
     restart: always
 
 # Definimos las dos redes necesarias. Ojo con la indentación
-networks:
+  networks:
     frontend-network:
     backend-network:
 
