@@ -115,19 +115,24 @@ Deberá indicar el orden en el que se deben iniciar los servicios con la opción
 **Archivos en el repositorio**
 ------------
 1. **README.md** Documentación.
+2. **/apache** Contiene un dockerfile para descargar la aplicación Web, entre otras cosas.
+3. **/sql** Contiene un script .sql para la base de datos MySQL
+4. **.env** Entorno para docker-compose.
+5. **docker-compose.yml** Contenedores a desplegar
+6. **16.sh** Ejecutable para el despliegue completo. Contiene instrucciones y explicaciones.
 
 
 **Referencias**
 ------------
 - Guía original para la práctica.
 https://josejuansanchez.org/iaw/practica-16/index.html
--
--
-
-
+- Explicación sobre dockerfile (eng)
+https://docs.docker.com/engine/reference/builder/
+- Aplicación web empleada
+https://github.com/josejuansanchez/iaw-practica-lamp
 
 **Editor Markdown**
 ------------
-- Markdown editor.
+- Markdown editor. Alternativamente, investigar atajos de teclado como Ctrl+B= bold (negrita)
 https://markdown-editor.github.io/
 
