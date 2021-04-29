@@ -133,6 +133,6 @@ https://github.com/josejuansanchez/iaw-practica-lamp
 
 **Editor Markdown**
 ------------
-- Markdown editor. Alternativamente, investigar atajos de teclado como Ctrl+B= bold (negrita)
+- Markdown editor. Alternativamente, investigar atajos de teclado como Ctrl+B= bold (negrita) 
 https://markdown-editor.github.io/
 
