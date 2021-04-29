@@ -37,6 +37,7 @@ services:
     restart: always
 
     # Servicio MySQL. Esta vez usaremos variables de entorno.
+    #El volumen ./sql se usa para ejecutar un script para nuestra base de datos ubicado en la carpeta mysql
   mysql:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
