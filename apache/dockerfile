@@ -1,0 +1,30 @@
+# Como imagen base deberá utilizar la versión de ubuntu etiquetada como focal
+FROM ubuntu:focal
+
+RUN echo 'Docker coming in hot!'
+
+LABEL title="apache-lamp" \
+  author="Jose Antonio Padilla Soler"
+
+# Definimos la variable de entorno según las instrucciones
+ENV DEBIAN_FRONTEND=noninteractive 
+ENV TZ=Europe/Madrid
+
+# Software necesario para apache y servir la aplicación web que usa mysql
+RUN apt-get update \
+    && apt-get install -y apache2 \
+    && apt-get install -y php \
+    && apt-get install -y libapache2-mod-php \
+    && apt-get install -y php-mysql
+
+# Instalación de git, clonación de repositorio
+# Cambiamos config.php y señalo donde se está ejecutando mysql. Para otra ip, sustituimos localhost por dicha ip.
+# Eliminamos index.html por orden de carga. Queremos que se ejecute index.php
+RUN apt install git -y \
+    && cd /tmp \
+    && git clone https://github.com/josejuansanchez/iaw-practica-lamp \
+    && mv /tmp/iaw-practica-lamp/src/* /var/www/html/ \
+    && sed -i 's/localhost/mysql/' /var/www/html/config.php \
+    && rm /var/www/html/index.html
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"] 
