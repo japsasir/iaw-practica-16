@@ -56,9 +56,9 @@ services:
     restart: always
 
 # Definimos las dos redes necesarias. Ojo con la indentación
-  networks:
-    frontend-network:
-    backend-network:
+networks:
+  frontend-network:
+  backend-network:
 
 # Definimos los volúmenes disponibles
 volumes:    
