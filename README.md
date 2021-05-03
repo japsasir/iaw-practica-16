@@ -110,7 +110,14 @@ Deberá hacer uso de un archivo .env para almacenar todas las variables de entor
 **1.3.5 Orden en el que se inician los servicios**
 Deberá indicar el orden en el que se deben iniciar los servicios con la opción depends_on. Se recomienda la lectura del artículo Control startup and shutdown order in Compose
 
+![](https://imgur.com/rU4k6Nx)
+Al terminar todos los pasos, podemos acceder a phpMyAdmin accediendo al puerto 8080 (Habilitandolo en el grupo de seguridad de AWS) y con las siguientes credenciales.
 
+Servidor: mysql
+User: lamp_user
+Pass: lamp_password
+
+Podemos revisa los datos introducidos en la base de datos en 'Base de datos > Examinar > Tabla'
 
 **Archivos en el repositorio**
 ------------
